@@ -1,0 +1,7 @@
+
+db.sqlite3
+
+# virtualenv
+env
+
+__pycache__/*
