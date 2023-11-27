@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Signup from './components/Signup';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className='text-6xl' >loda</p>
-      </header>
-    </div>
+    <Router>
+    {/* <Navbar />
+    <Alert/> */}
+    <Routes>
+      <Route path="/signup" element={<Signup />} />
+    </Routes>
+  </Router>
   );
 }
 
