@@ -1,7 +1,7 @@
-import React from 'react';
-import img from '../images/mock.png';
+import React from 'react'
+import img from '../images/mock2.png';
 import { useNavigate } from "react-router-dom";
-export default function Signup() {
+export default function Login() {
     const navigate = useNavigate();
   return (
     <>
@@ -10,19 +10,7 @@ export default function Signup() {
       <div className="bg-white p-8  shadow-md rounded-2xl flex">
         {/* Your form goes here */}
         <form className="space-y-4">
-        <h2 className="text-3xl  text-pink-600 col-p2 mb-6">Sign Up</h2>
-          <div>
-            <label htmlFor="name" className="block col-p2 text-sm font-medium text-gray-600">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="mt-1 p-2 pr-24 w-full border rounded-md"
-              placeholder="John Doe"
-            />
-          </div>
+        <h2 className="text-3xl  text-pink-600 col-p2 mb-6">Login</h2>
 
           <div>
             <label htmlFor="email" className="block col-p2 text-sm font-medium text-gray-600">
@@ -54,15 +42,15 @@ export default function Signup() {
             type="submit"
             className="w-full bg-pink-700 text-white col-p2 p-2 rounded-lg hover:bg-pink-600"
           >
-            Sign Up
+            Login
           </button>
-          <a onClick={() => navigate('/login')} className='text-blue-400 text-xs col-p2 underline hover:cursor-pointer'>
-            already have an account? Login
+          <a onClick={() => navigate('/signup')}  className='text-blue-400 text-xs col-p2 underline hover:cursor-pointer'>
+            Don't have an account? Sign up
           </a>
         </form>
-        <img className='w-96 hidden md:block ' src={img} alt="..." />
+        <img className='w-80 hidden md:block ' src={img} alt="..." />
       </div>
     </div>
     </>
-  );
+  )
 }
